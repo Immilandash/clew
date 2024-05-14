@@ -311,6 +311,7 @@ input[type=text], select, textarea {
         background: goldenrod;
         top: 100%;
         right: 0;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
