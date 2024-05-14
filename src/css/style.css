@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    --scrollbarBG: rgba(218, 165, 32, 0.379);
+  --thumbBG: rgb(3, 76, 76) ;
+}
+body::-webkit-scrollbar {
+    width: 11px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+  
+body{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://pragatiresorts.com/wp-content/uploads/2018/10/honey-moon.jpg");
+    background-attachment: fixed;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+/* header */
+header span{
+    color: goldenrod;
+    text-shadow: 2px 2px 2px black;
+}
+nav{
+    padding: 20px;
+    background: rgb(3, 76, 76);
+    color: white;
+    position:fixed;
+    z-index: 9999999;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.nav{
+    display: flex;
+    place-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__menues{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+a.nav__menues__anchors{
+    text-decoration: none;
+    color: white;
+}
+a.nav__menues__anchors:hover{
+    text-shadow: 5px 3px 1px black;
+    transition: text-shadow, 0.5s ease-in;
+    color: goldenrod;
+}
+.nav__language{
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color:rgb(3, 76, 76);
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+.nav__language img{
+    height: 10px;
+}
+.lang__menu{
+    position: absolute;
+    z-index: 999;
+    background: white;
+    list-style: none;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 90px;
+    border-radius: 10px;
+    display: none;
+}
+.nav__language:hover .lang__menu,
+.nav__profile:hover .profile__menu{
+    display: block;
+}
+.nav__profile{
+    height: 30px;
+    width: 30px;
+    border:2px solid white;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    color:rgb(3, 76, 76);
+}
+.profile__menu{
+    position: absolute;
+    z-index: 999;
+    background: white;
+    list-style: none;
+    top: 0;
+    left: -100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+.hero{
+    margin: 80px 0 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.133);
+}
+.hero__heading__1, .hero__heading__2{
+    font-size: 70px;
+    text-shadow: 2px 2px 2px goldenrod;
+    line-height: 1.2em;
+}
+.hero__btn{
+    padding: 10px;
+    border-radius: 15px;
+    background: rgb(3, 76, 76);
+    border: none;
+    color: goldenrod;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+}
+.hero__or{
+    text-shadow: 2px 2px 2px goldenrod;
+}
+.hero__anchor{
+    background: rgb(3, 76, 76);
+    color: goldenrod;
+    width: auto;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.hero__btn:hover, .hero__anchor:hover{
+    color: white;
+    cursor: pointer;
+}
+.flex__with__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+
+
+/* widgets */
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+}
+
+
+/* plans */
+.plans{
+    margin-top: 2em;
+}
+.plans__heading{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px goldenrod;
+}
+.plans__flex{
+    justify-content: center;
+    gap: 20px;
+}
+.plans__card{
+    width: 20%;
+    padding: 10px;
+}
+.plans__card:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: scale, 0.5s ease-in-out;
+}
+.plans__card li{
+    font-size: 10px;
+    margin: 0  0 10px 0;
+    font-weight: bold;
+    color: goldenrod;
+}
+.plans__card li:nth-child(1){
+    margin-top: 10px;
+    color: red;
+}
+
+/* about */
+
+.about__card{
+    margin: 20px auto;
+    padding: 10px;
+}
+.about__card h1{
+    color: goldenrod;
+}
+.about__card p{
+    color: rgba(0, 0, 0, 0.878);
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* contact  */
+.contact__card{
+    padding: 10px;
+    margin: 0 auto;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(3, 76, 76);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgba(3, 76, 76, 0.844);
+  }
+
+.gallery{
+    display: flex;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  div.gallery__box {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery__box:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery__box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  .responsive {
+    padding: 0 6px;
+    width: 20.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@media screen and (max-width: 760px) {
+    .nav{
+        justify-content: start;
+        gap: 20px;
+    }
+    ul.nav__menues{
+        position: absolute;
+        background: goldenrod;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        width: 50%;
+        height: 70vh;
+        border-bottom-left-radius: 50%;
+    }
+    .nav__burger{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 20px auto 0;
+        right: inherit;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .bar{
+        width: 100%;
+        height: 1px;
+        background: whitesmoke;
+        border-radius: 20px;
+    }
+    .hero__heading__1, .hero__heading__2{
+        font-size: xx-large;
+    } 
+    .plans__flex{
+        overflow-x: scroll;
+        flex-basis: 800px;
+    }
+    .plans__card{
+        width: 90%;
+    }
+}
