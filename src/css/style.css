@@ -317,7 +317,7 @@ input[type=text], select, textarea {
         align-items: center;
         z-index: 99999;
         width: 50%;
-        height: 70vh;
+        height:auto;
         border-bottom-left-radius: 50%;
     }
     .nav__burger{
