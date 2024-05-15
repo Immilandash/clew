@@ -127,10 +127,16 @@ a.nav__menues__anchors:hover{
     justify-content: center;
     background: rgba(0, 0, 0, 0.133);
 }
-.hero__heading__1, .hero__heading__2, .gallery__heading{
+.hero__heading__1, .hero__heading__2{
     font-size: 70px;
     text-shadow: 2px 2px 2px goldenrod;
     line-height: 1.2em;
+}
+.gallery__heading, .contact__heading, .plans__heading{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px goldenrod;
 }
 .hero__btn{
     padding: 10px;
@@ -180,12 +186,6 @@ a.nav__menues__anchors:hover{
 .plans{
     margin-top: 2em;
 }
-.plans__heading{
-    text-align: center;
-    color: white;
-    font-size: 35px;
-    text-shadow: 2px 2px 2px goldenrod;
-}
 .plans__flex{
     justify-content: center;
     gap: 20px;
@@ -227,7 +227,7 @@ a.nav__menues__anchors:hover{
 /* gallery    */
 
 .gallery{
-    color: white;
+    padding: 0 20%;
 }
 
 /* contact  */
@@ -264,9 +264,13 @@ input[type=text], select, textarea {
     padding: 30px;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 }
   div.gallery__box {
     border: 1px solid #ccc;
+    background: whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
   }
   
   div.gallery__box:hover {
@@ -285,6 +289,22 @@ input[type=text], select, textarea {
   .responsive {
     padding: 0 6px;
     width: 20.99999%;
+  }
+
+  /* footer  */
+  footer{
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 40px 0 0;
+  }
+  .footer{
+    padding: 20px;
+    background: rgb(3, 76, 76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
   }
   
   @media only screen and (max-width: 700px) {
@@ -351,7 +371,7 @@ input[type=text], select, textarea {
         bottom: 10%;
         right: 10%;
     }
-    .hero__heading__1, .hero__heading__2, .gallery__heading{
+    .hero__heading__1, .hero__heading__2{
         font-size: xx-large;
     } 
     .plans__flex{
